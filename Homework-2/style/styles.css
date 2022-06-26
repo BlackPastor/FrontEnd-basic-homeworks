@@ -1,0 +1,21 @@
+p{
+    text-align: center;
+}
+h1,h3{ 
+    text-align: center;
+    color: rgb(4, 4, 32);
+    padding: 15px;
+}
+body{
+    margin: 50px 250px 50px 250px;
+    background-color: whitesmoke;
+    padding: 0px;
+    width: 1000px;
+}
+img{
+    width: 250px;
+    padding-left: 150px;
+}
+.rewiew{
+    margin-left: 400px;
+}
