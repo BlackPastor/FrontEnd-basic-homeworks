@@ -9,6 +9,7 @@ body{
     width: 100%;
     height: 4500px;
     font-family: 'Mukta';
+    background:linear-gradient(180deg, #F6FAFD 0%, #FFFFFF 19.4%);
 }
 .section1{
     margin: 50px 112px 100px 200px;
@@ -103,6 +104,8 @@ header{
     width: 1117px;
     height: 560px;
     margin-right: 175px;
+    background: rgba(240, 99, 184, 0.15);
+    border-radius: 50px;  
 }
 .section2 h1{
     font-family: 'Mukta';
