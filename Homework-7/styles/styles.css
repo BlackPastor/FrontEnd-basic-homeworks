@@ -13,7 +13,6 @@ p li span{
     grid-auto-rows: 75px;
     background-color: white;
 }
-
 .menu{
     grid-column: 1/4;
 }
@@ -25,13 +24,13 @@ p li span{
     background: url("hero.png");
     position: relative;
 }
-.lady-shop{
+.lady{
+    align-self: center;
+    margin: auto;
     font-family: 'Rochester', cursive;
     font-weight: 400;
     font-size: 32px;
-    line-height: 41px;
-    align-self: center;
-    margin: auto; 
+    line-height: 41px;  
 }
 .sites{
     align-self: center;
@@ -54,6 +53,7 @@ img{
     font-size: 28px;
     line-height: 37px;
     color: black;
+    border-top: 1px #f3f3f3c1 solid; 
 }
 .menu a{
     color: #EDA3B5;
@@ -156,19 +156,21 @@ img{
     top: 77%;
     left: 3%;
 }
-/* Text must be white */
 .blond button{
     position: absolute;
     width: 93px;
     height: 30px;
-    background: #ffffff;
-    opacity: 0.4;
+    background-color: darkgrey;
+    opacity: 0.8;
     border-radius: 8px;
     border: none;
     left: 3%;
-    bottom: 3%;  
+    bottom: 3%; 
 }
-/* Text must be white */
+.blond button a{
+    text-decoration: none;
+    color: #FFFFFF;
+}
 .grey span{
     font-family: 'Mulish';
     font-style: normal;
@@ -179,7 +181,6 @@ img{
     position: absolute;
     margin-left: 2%;
     margin-top: 5%;
-  
 }
 .grey h1{
     position: absolute;
@@ -241,4 +242,235 @@ img{
     color: #1B2437; 
     left: 46%;
     top: 75%;
+}
+.dress{
+    display: grid;
+    position: relative;
+    width: 74%;
+    height: 313px;
+    background: #FFFFFF;
+    border-radius: 16px; 
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 230px;
+}
+.circles{
+    grid-column: 1/5;
+    line-height: 83px;
+    text-align: center;
+}
+.dress h1{
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 30px;
+    margin-left: 70px;
+}
+h6{
+    position: absolute;
+    width: 274px;
+    height: 67px;
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 67px;
+    margin: 50px 200px; 
+}
+.shop{
+   display: grid;
+   position: relative; 
+   grid-template-columns: repeat(3, 1fr);
+   grid-template-rows: 487px 487px;
+   margin-top: 150px;
+   width: 74%;
+   gap: 30px;
+}
+.shop .item{
+    background-color: #FFFFFF;
+    width: 350px;
+    height: 487px;
+    box-shadow: 2px 5px 45px rgba(237, 163, 181, 0.25);
+    border-radius: 16px;
+ 
+}
+.shop h1{
+    width: 325px;
+    height: 30px;
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 30px;
+    color: #000000;
+    margin-left: 20px; 
+}
+.shop p{
+    position: absolute;
+    width: 325px;
+    height: 60px;
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 30px;
+    margin-left: 20px;
+}
+.price{
+    margin-left: 20px;
+    margin-top: 130px;
+}
+.false{
+    position: absolute;
+    width: 153px;
+    height: 58px;
+    background: #EDA3B5;
+    border-radius: 15px;
+    border: none; 
+    margin-left: 70px;
+    margin-top: 110px;
+    color: #FFFFFF;
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 30px; 
+}
+.true{
+    position: absolute;
+    width: 153px;
+    height: 58px;
+    background: #1B2437;
+    border-radius: 15px;
+    border: none;
+    margin-left: 70px;
+    margin-top: 110px;
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
+    color: #FFFFFF; 
+}
+.heart{
+    position: absolute;
+    margin-top: -250px;
+    margin-left: 280px;
+}
+.contacts{
+    display: grid;
+    position: relative;
+    width: 72%;
+    height: 658px;
+    margin-top: 150px;
+    border: none;
+    border-radius: 16px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 518px 150px;
+    background: #FFFFFF;
+    border-radius: 16px;
+    padding: 20px;
+    gap: 20px; 
+}
+.map{
+    grid-column: 1/4;
+    grid-row: 1/2;
+    width: 1086px;
+}
+.email{
+    grid-row: 2/3;
+    text-align: center;
+}
+.address{
+    text-align: center;
+}
+.number{
+    text-align: center;
+}
+.contacts span{
+   
+    height: 30px;
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 30px; 
+}
+.pin{
+    position: absolute;
+    top: 40%;
+    left: 40%;
+}
+.footer{
+    display: grid;
+    position: relative;
+    width: 100%;
+    height: 333px;
+    background: #FFFFFF;
+    grid-template-columns: 1.7fr 1fr 1fr 1fr;
+}
+.ladyshop h5{
+    font-family: 'Rochester';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 41px;
+    margin-top: 5%;
+    margin-left: 30%;
+}
+.footer p{
+    width: 255px;
+    height: 180px;
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 30px;
+    color: #5C5C5C; 
+    margin-left: 30%;
+    margin-top: 4%;
+}
+.footer h1{
+    height: 30px;
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 30px;
+    text-align: left; 
+    margin-top: 10%;
+}
+.footer ul li{
+    height: 30px;
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 30px;
+    color: #8E8E93; 
+    margin-top: 5%;
+}
+.foot{
+    display: flex;
+    height: 74px;
+    background: #E5E5EA;
+    margin-top: 0; 
+    justify-content: space-between; 
+}
+.left-side{
+    width: 171px;
+    height: 30px;
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 30px;
+    color: #8E8E93;  
+    align-self: center;
+    margin-left: 11%;
+}
+.right-side{
+    align-self: center;
+    margin-right: 11%;
 }
