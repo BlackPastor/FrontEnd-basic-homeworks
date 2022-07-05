@@ -547,11 +547,11 @@ html, body{
         background-image: none;
         display: block;
         align-items: center;
-        margin: 0 auto;
+        text-align: center; 
     }
 .left{
        display: flex;
-       max-width: 340px;
+       max-width: 540px;
        min-height: 300px;
        flex-direction: column;
        position: relative;
@@ -559,10 +559,15 @@ html, body{
        text-align: center;
        align-items: center;
        align-content: center;
-       margin: 0 10px;
        align-self: center;
+       margin: 0 auto;
     }
-   
+.left h1, p, li{
+    padding: 0;
+}
+.logo{
+    padding: 10%;
+}
 .section2{
         max-width: 720px;
         min-height: 950px;
@@ -585,7 +590,7 @@ html, body{
 .images{
         position: relative;
         display: flex;
-        max-height: 592px;
+        max-height: 300px;
 }
 .ronaldo{
     width: 720px;
@@ -609,15 +614,31 @@ html, body{
 .section3{
     max-width: 720px;
     height: 450px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+    background-image: none;
+}
+.text3{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-content: center;
+    max-width: 500px;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    margin: 10%; 
+}
+.section3 p{
+    max-width: 700px;
 }
 .section4{
     max-width: 720px;
     height: 1500px;
 }
+.section4 h1{
+    margin-top: 5%;
+}
 .table{
+    margin-top: 15%;
     grid-template-columns: 300px;
     grid-template-rows: repeat(9,150px);
 }
@@ -648,7 +669,7 @@ html, body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 10px 20px;
+    margin: 10%;
     max-width: 500px;
 }
 .apps2{
@@ -666,11 +687,11 @@ html, body{
 }
 @media(max-width:360px){
     .section1{
+        max-width: 360px;
         height: 525px;
+        display: block;
     }
-    .logo{
-        margin-top: 8%;
-    }
+    
     .section1 h1{
         font-style: normal;
         font-weight: 700;
@@ -680,7 +701,7 @@ html, body{
         align-items: flex-end;
         text-align: center;
         letter-spacing: 0.03em; 
-        margin-top: 15%;
+        margin-top: 5%;
         width: 320px;
         height: 119px;
         margin-bottom: 10%;
@@ -704,6 +725,7 @@ html, body{
     }
     .section2{
         max-width: 360px;
+
     }
     .section2 h1{
         width: 320px;
@@ -737,20 +759,29 @@ html, body{
     }
     .section3{
         height: 1000px;
+        position: relative;
         max-width: 360px;
-        background-image: none;
-        background-image: url(../assets/Group\ 697.1.png);
+        background-image:url(../assets/Group\ 697.1.png) ;
         background-position: bottom;
+        background-repeat: no-repeat;
+        background-size: contain;
     }
     .text3{
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
+        position: relative;
+        display: block;
+        text-align: start;
+        max-width: 340px;
+        align-items: center;
+        margin-top: 0%;
+        align-content: center;
     }
     .text3 p{
+        max-width: 300px;
         margin-bottom: 10%;
+    }
+    .text3 h2, h3{
+       text-align: center;
+    
     }
     .section4{
         background-image: none;
