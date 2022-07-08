@@ -1,0 +1,218 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+/* cradle block */
+.cradle{
+    position: absolute;
+    top: 1%;
+    left: 30%;
+    border-top: 10px solid grey;
+    display: flex;
+    padding: 0 100px 120px ; 
+    background-color:antiquewhite;
+}
+.cradle span{
+    position: relative;
+    display: block;
+    width: 1px;
+    height: 150px;
+    background: grey;
+    margin: -2px 24px;
+    transform-origin: top;
+}
+.cradle span::before{
+    content: '';
+    position: absolute;
+    width: 49px;
+    height: 49px;
+    bottom: 0;
+    left: -24px;
+    border-radius: 50%;
+    background: rgb(253,45,45);
+    background: linear-gradient(270deg, rgba(253,45,45,1) 0%, rgba(60,75,229,1) 100%);
+} 
+.cradle span:first-child{
+    animation: moveLeft 2s linear infinite;
+}
+.cradle span:last-child{
+    animation: moveRight 2s linear 1s infinite;
+}
+.shadow{
+    position: absolute;
+    display: flex;
+    left:30%;
+    padding: 0 100px 150px;
+}
+.shadow span{
+    position: relative;
+    display: block;
+    width: 30px;
+    height: 1px;
+    margin: 200px 10px;
+    box-shadow: 0px 10px 10px grey;
+}
+.shadow span:first-child{
+    animation: shadowLeft 2s linear infinite;
+}
+.shadow span:last-child{
+    animation: shadowRight 2s linear 1s infinite;
+}
+
+@keyframes moveLeft{
+    0%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(30deg);
+    }
+    50%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+@keyframes moveRight{
+    0%{
+        transform: rotate(0deg);
+        }
+    25%{
+         transform: rotate(-30deg);
+        }
+    50%{
+         transform: rotate(0deg);
+        }
+    100%{
+        transform: rotate(0deg);
+        }
+}
+@keyframes shadowLeft{
+    0%{
+        left: 0px;
+    }
+    25%{
+        left: -60px;
+    }
+    50%{
+        left: 0px;
+    }
+    100%{
+        left: 0px;
+    }
+}
+@keyframes shadowRight{
+    0%{
+        right: 0px;
+    }
+    25%{
+        right: -60px;
+    }
+    50%{
+        right: 0px;
+    }
+    100%{
+        right: 0px;
+    }
+}
+/* sword block */
+.swords{
+    position: absolute;
+    display: flex;
+    top: 45%;
+    left: 30%;
+    width: 550px;
+    height: 350px;
+    background: dimgray;
+}
+.button{
+    position: absolute;
+    display: block;
+    align-self: center;
+    left: 50%;
+    transform: translate(-50%);
+    width: 100px;
+    height: 100px;
+    border: none;
+    background: dimgray;
+    cursor: pointer;
+}
+.sword{
+    position: relative;
+    width: 100px;
+    height: 8px;
+    border-radius: 4px;
+    margin: 19px -5px;
+    transform-origin: left;
+}
+.first{
+    background: azure;
+    animation: swordDown 1s 1 alternate forwards;
+    animation-play-state: paused;
+}
+.first::after{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    left: 15px;
+    top: -1px;
+    background: dimgray;
+}
+.second{
+    background: azure;
+    animation: swordHide 1s 1 alternate forwards;
+    animation-play-state: paused;
+}
+.second::after{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    right: 15px;
+    background: dimgray;
+}
+.third{
+    background: azure;
+    animation: swordUp 1s 1 alternate forwards;
+    animation-play-state: paused;
+}
+.third::after{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    left: 15px;
+    top: -1px;
+    background: dimgray;
+}
+.button:focus > .first{
+    animation-play-state: running;
+}
+.button:focus > .second{
+    animation-play-state: running;
+}
+.button:focus > .third{
+    animation-play-state: running;
+}
+
+
+@keyframes swordDown{
+    to{ background: rgb(247, 98, 98);
+        transform: rotate(33deg);
+        box-shadow: 0px 0px 5px 1px rgb(247, 98, 98);
+    }
+}
+@keyframes swordHide{
+    to{
+        opacity: 0;
+    }
+}
+@keyframes swordUp{
+    to{
+        background: rgb(245, 245, 104);
+        transform: rotate(-33deg);
+        box-shadow: 0px 0px 5px 1px rgb(245, 245, 104);
+    }
+}
+
