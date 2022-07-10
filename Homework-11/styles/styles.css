@@ -44,5 +44,6 @@ hr{
 .buttons{
     border: none;
     border-radius: 0;
+    outline: none;
 }
 
