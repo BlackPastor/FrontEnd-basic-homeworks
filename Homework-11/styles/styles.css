@@ -1,0 +1,44 @@
+body{
+    width: 100%;
+}
+nav{
+    max-width: 960px;
+    margin: 10px auto;
+}
+a{
+    text-decoration: none;
+}
+hr{
+    margin-left: 2%;
+}
+.header{
+    font-weight: 500;
+    font-size: 36px;
+}
+.search{
+    text-align: center;
+    background-image: url(../images/search.svg);
+    background-repeat: no-repeat;
+    background-position-x: 4rem;
+    background-position-y: .6rem;
+    border: 1px solid rgba(128, 128, 128, 0.438);
+    border-radius: 4px;
+    outline: none;
+}
+.icon{
+    margin-right: .3rem;
+}
+.content{
+    max-width: 960px;
+    margin: 0 auto;
+}
+.link{
+    color: rgba(19, 55, 104, 1);
+}
+.grey{
+    opacity: 0.5;
+}
+.line{
+    text-decoration: overline;
+}
+
