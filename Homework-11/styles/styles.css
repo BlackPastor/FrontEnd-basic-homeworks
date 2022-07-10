@@ -41,4 +41,8 @@ hr{
 .line{
     text-decoration: overline;
 }
+.buttons{
+    border: none;
+    border-radius: 0;
+}
 
