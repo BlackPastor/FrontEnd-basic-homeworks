@@ -1,15 +1,19 @@
 body{
     width: 100%;
+    font-family: 'Roboto',sans-serif;
 }
-nav{
+.head{
     max-width: 960px;
-    margin: 10px auto;
+    margin: 20px auto;
 }
 a{
     text-decoration: none;
 }
 hr{
     margin-left: 2%;
+}
+p{
+    color:#262626;
 }
 .header{
     font-weight: 500;
@@ -25,25 +29,41 @@ hr{
     border-radius: 4px;
     outline: none;
 }
-.icon{
-    margin-right: .3rem;
-}
 .content{
     max-width: 960px;
     margin: 0 auto;
+}
+.dots{
+    color: black;
+    font-weight: 900;
 }
 .link{
     color: rgba(19, 55, 104, 1);
 }
 .grey{
     opacity: 0.5;
-}
-.line{
-    text-decoration: overline;
+    text-align: center;
 }
 .buttons{
     border: none;
     border-radius: 0;
     outline: none;
 }
-
+.posts{
+    text-decoration: overline;
+}
+@media (max-width: 992px){
+    .photo{
+        width: 230px;
+    }
+}
+@media (max-width: 768px){
+    .photo{
+        width: 160px;
+    }
+}
+@media (max-width: 560px){
+    .photo{
+        width: 120px;
+    }
+}

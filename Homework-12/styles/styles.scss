@@ -1,0 +1,52 @@
+$fontSizeMiddle: 16px;
+$fontSizeLittle: 14px;
+$fontSizeSmall:12px;
+$fontSizeBiggest:50px;
+$fontSizeBigger:36px;
+$fontSizeBig:26px;
+$fontWeight4:400;
+$fontWeight5:500;
+$fontWeight9:900;
+$fontColorBlue:#505F98;
+$fontColorBlack:#091133;
+$fontColorGrey:#5D6970;
+$fontColorDollar:#222F65;
+$fontColorUIendLendie:#37447E;
+$fontColorWhite:#FFFFFF;
+$colorButton:#111B47;
+$colorFooterMenu:#929ECC;
+
+
+
+h1{
+    font-size: $fontSizeBiggest;
+    font-weight: $fontWeight5;
+    color: $fontColorBlack; line-height: 66px;
+    letter-spacing: 1px;
+}
+p{
+    font-size: $fontSizeLittle;
+    font-weight: $fontWeight4;
+    color: $fontColorGrey;
+    line-height: 30px;
+}
+body{
+    width: 100%;
+    height:fit-content;
+    font-family: 'Roboto', sans-serif;
+    background-image: url(../img/designer_1.svg);
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+.wrapper{
+    max-width: 1110px;
+    margin: 0 auto;
+}
+.header{
+    min-height: 242px; 
+}
+
+.container1{
+    margin-top: 808px;
+}
+
