@@ -22,7 +22,7 @@
         </div>
     </div>
 </header>
-<section class="main-screen">
+<div class="main-screen">
     <div class="wrapper">
         <div class="left-block">
             <h1 class="h1">Видеопарктроник - <span class="yellow">Автоновинка 2017 года</span></h1>
@@ -34,14 +34,14 @@
             <button class="btn-order">Заказать</button>
         </div>
         <div class="right-block">
-            <img src="img/product (1).avif" alt="" class="main-image">
+            <img src="img/product(1).avif" alt="" class="main-image">
             <div class="price">
                 <div class="old-price">6999 грн.</div>
                 <div class="new-price">3999 грн.</div>
             </div>
         </div>
     </div>
-</section>
+</div>
 <section class="about">
     <div class="wrapper">
         <h2 class="h2"><span class="yellow">Характеристики</span> видеопарктроника</h2>
@@ -172,7 +172,7 @@
 <section class="reviews">
     <div class="wrapper">
         <h2 class="h2">отзывы о нашем <span class="yellow">видеопарктронике</span></h2>
-        <img src="img/arrow-left.avif" alt="" class="arrow-left">
+        <button class="bunnon-left" onclick="plusDivs(-1)"><img src="img/arrow-left.avif" alt="" class="arrow-left"></button>
         <div class="review-slider">
             <div class="slide">
                 <img src="img/review1.avif" alt="" class="main-review-img">
@@ -194,8 +194,29 @@
                 <div class="review-author"><img src="img/review-ava1.avif" alt="" class="ava"><b>Константин</b><i>г.
                     Днепропетровск</i></div>
             </div>
+            <div class="slide">
+                <img src="img/review1.avif" alt="" class="main-review-img">
+                <p class="review-text">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur, distinctio rerum quos labore sit quam quidem voluptatem dicta nisi. Qui odio dolorem architecto non rerum sapiente nisi dolore temporibus quos.
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur, distinctio rerum quos labore sit quam quidem voluptatem dicta nisi. Qui odio dolorem architecto non rerum sapiente nisi dolore temporibus quos.
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur, distinctio rerum quos labore sit quam quidem voluptatem dicta nisi. Qui odio dolorem architecto non rerum sapiente nisi dolore temporibus quos.
+                </p>
+                <div class="review-author"><img src="img/review-ava1.avif" alt="" class="ava"><b>Владислав</b><i>г.
+                    Москва</i></div>
+            </div>
+            <div class="slide">
+                <img src="img/review1.avif" alt="" class="main-review-img">
+                <p class="review-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur expedita earum accusantium est perferendis voluptatum obcaecati similique pariatur voluptas. Deleniti non ut ullam voluptatum odit iusto laborum sunt a voluptatem!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur expedita earum accusantium est perferendis voluptatum obcaecati similique pariatur voluptas. Deleniti non ut ullam voluptatum odit iusto laborum sunt a voluptatem!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur expedita earum accusantium est perferendis voluptatum obcaecati similique pariatur voluptas. Deleniti non ut ullam voluptatum odit iusto laborum sunt a voluptatem!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur expedita earum accusantium est perferendis voluptatum obcaecati similique pariatur voluptas. Deleniti non ut ullam voluptatum odit iusto laborum sunt a voluptatem!
+                </p>
+                <div class="review-author"><img src="img/review-ava1.avif" alt="" class="ava"><b>Антон</b><i>г.
+                    Санкт-Петербург</i></div>
+            </div>
         </div>
-        <img src="img/arrow-right.avif" alt="" class="arrow-right">
+        <button class="button-right" onclick="plusDivs(1)"><img src="img/arrow-right.avif" alt="" class="arrow-right"></button>
     </div>
 </section>
 <section class="delivery">
@@ -276,6 +297,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
+<!-- preloader -->
 <script>
 
 setTimeout(function(){
@@ -284,6 +306,27 @@ setTimeout(function(){
     
 </script>
 
+<!-- slider -->
+
+<script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+    
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+    
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("slide");
+      if (n > x.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = x.length}
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      x[slideIndex-1].style.display = "block";  
+    }
+    </script>
 
 </body>
 </html>
