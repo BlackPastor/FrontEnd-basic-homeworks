@@ -2,10 +2,10 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Homework#15</title>
     <link rel="stylesheet" href="css/screen.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/main.css">
+    <title>Homework#15</title>
 </head>
 <body>
 
@@ -172,8 +172,9 @@
 <section class="reviews">
     <div class="wrapper">
         <h2 class="h2">отзывы о нашем <span class="yellow">видеопарктронике</span></h2>
-        <button class="bunnon-left" onclick="plusDivs(-1)"><img src="img/arrow-left.avif" alt="" class="arrow-left"></button>
-        <div class="review-slider">
+        <button class="control_prev"><img src="img/arrow-left.avif" alt="" class="arrow-left"></button>
+        <div id="review-slider">
+            <div class="slideshow">
             <div class="slide">
                 <img src="img/review1.avif" alt="" class="main-review-img">
                 <p class="review-text">
@@ -235,7 +236,8 @@
                     Санкт-Петербург</i></div>
             </div>
         </div>
-        <button class="button-right" onclick="plusDivs(1)"><img src="img/arrow-right.avif" alt="" class="arrow-right"></button>
+      </div>
+        <button class="control_next"><img src="img/arrow-right.avif" alt="" class="arrow-right"></button>
     </div>
 </section>
 <section class="delivery">
@@ -328,24 +330,51 @@ setTimeout(function(){
 <!-- slider -->
 
 <script>
-    var slideIndex = 1;
-    showDivs(slideIndex);
+
+jQuery(document).ready(function ($) {
+
     
-    function plusDivs(n) {
-      showDivs(slideIndex += n);
-    }
-    
-    function showDivs(n) {
-      var i;
-      var x = document.getElementsByClassName("slide");
-      if (n > x.length) {slideIndex = 1}
-      if (n < 1) {slideIndex = x.length}
-      for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";  
-      }
-      x[slideIndex-1].style.display = "block";  
-    }
-    </script>
+  var slideCount = $('#review-slider .slideshow .slide').length;
+  var slideWidth = $('#review-slider .slideshow .slide').width();
+  var slideHeight = $('#review-slider .slideshow .slide').height();
+  var sliderUlWidth = slideCount * slideWidth;
+  
+  $('#review-slider').css({ width: slideWidth, height: slideHeight });
+  
+  $('#review-slider .slideshow').css({ width: sliderUlWidth, marginLeft: - slideWidth });
+  
+  $('#review-slider .slideshow .slide:last-child').prependTo('#review-slider .slideshow');
+
+  function moveLeft() {
+      $('#review-slider .slideshow').animate({
+          left: + slideWidth
+      }, 200, function () {
+          $('#review-slider .slideshow .slide:last-child').prependTo('#review-slider .slideshow');
+          $('#review-slider .slideshow').css('left', '');
+      });
+  };
+
+  function moveRight() {
+      $('#review-slider .slideshow').animate({
+          left: - slideWidth
+      }, 600, function () {
+          $('#review-slider .slideshow .slide:first-child').appendTo('#review-slider .slideshow');
+          $('#review-slider .slideshow').css('left', '');
+      });
+  };
+
+  $('.control_prev').click(function () {
+      moveLeft();
+  });
+
+  $('.control_next').click(function () {
+      moveRight();
+  });
+   
+});
+
+</script>    
+  
 
 </body>
 </html>
